@@ -254,3 +254,95 @@ body {
 .testimonials__kira .testimonials__quote {
     color: var(--grey-400);
 }
+
+/* Between Desktop and Phone */
+
+@media (max-width: 768px) {
+    .testimonials__grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .testimonials__daniel,
+    .testimonials__jonathan,
+    .testimonials__jeannette,
+    .testimonials__patrick,
+    .testimonials__kira {
+        grid-column: auto;
+        grid-row: auto;
+        width: 100%;
+    }
+
+    .testimonials__daniel-quotation {
+        width: 80px;
+        right: 30px;
+        top: 10px;
+    }
+
+    .testimonials__text {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .testimonials__quote {
+        font-size: 0.95rem;
+        line-height: 1.3rem;
+    }
+
+    .testimonials__head img {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+
+
+/* PHONE-Design */
+
+@media (max-width: 375px) {
+    body {
+        padding: 1rem;
+    }
+
+    .testimonials__main {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .testimonials__grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .testimonials__daniel,
+    .testimonials__jonathan,
+    .testimonials__jeannette,
+    .testimonials__patrick,
+    .testimonials__kira {
+        grid-column: auto;
+        grid-row: auto;
+        width: 100%;
+    }
+
+    .testimonials__daniel-quotation {
+        width: 70px;
+        right: 20px;
+        top: 5px;
+    }
+
+    .testimonials__text {
+        font-size: 0.9rem;
+        line-height: 1.3rem;
+    }
+
+    .testimonials__quote {
+        font-size: 0.85rem;
+        line-height: 1.2rem;
+    }
+
+    .testimonials__head img {
+        width: 40px;
+        height: 40px;
+    }
+}
