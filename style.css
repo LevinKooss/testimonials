@@ -1,0 +1,256 @@
+/* Global Variables */
+:root {
+    /* Colors */
+    --purple-50:     hsl(260, 100%, 95%);
+    --purple-300:    hsl(264, 82%, 80%);
+    --purple-500:    hsl(263, 55%, 52%); 
+
+    --white:         hsl(0, 0%, 100%);
+    --grey-100:      hsl(214, 17%, 92%);
+    --grey-200:      hsl(0, 0%, 81%);
+    --grey-400:      hsl(224, 10%, 45%);
+    --grey-500:      hsl(217, 19%, 35%);
+    --dark-blue:     hsl(219, 29%, 14%);
+    --black:         hsl(0, 0%, 7%);
+
+    /* Font-weight */
+    --fw-500: 500;
+    --fw-600: 600;
+}
+
+/* Global Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Body-settings */
+body {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    background: var(--grey-100);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.testimonials__main {
+    max-width: 1100px;
+    width: 100%;
+
+    margin: auto;
+    padding: 2rem;
+}
+
+/* Grid-Settings */
+
+.testimonials__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 1.5rem;
+    max-width: 1100px;
+    height: 90%;
+    align-items: stretch;
+}
+
+
+.testimonials__daniel {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.testimonials__jonathan {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 2;
+}
+
+.testimonials__jeannette {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.testimonials__patrick {
+    grid-column: 2 / span 2;
+    grid-row: 3;
+}
+
+.testimonials__kira {
+    grid-column: 4;
+    grid-row: 1 / span 3;
+}
+
+
+/* Card-Styling */
+
+
+.testimonials__head {
+    display: flex;
+    align-items: center;
+}
+
+.testimonials__info {
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 1rem
+}
+
+.testimonials__name {
+    font-weight: var(--fw-500);
+}
+
+.testimonials__role {
+    font-size: 0.8rem;
+}
+
+.testimonials__text {
+    padding-top: 1rem;
+
+    max-width: 90%;
+
+    font-size: 1.0rem;
+    font-weight: var(--fw-600);
+}
+
+.testimonials__quote {
+    padding-top: 1rem;
+
+    font-size: 0.8rem;
+    font-weight: var(--fw-500);
+}
+
+
+/* Daniel */
+
+.testimonials__daniel {
+    background: var(--purple-500);
+    border-radius: 10px;
+
+    position: relative;
+
+    color: var(--white);
+
+    padding: 2rem;
+    box-shadow: 0px 50px 80px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+.testimonials__daniel .image-daniel {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 2px solid var(--purple-300);
+
+    object-fit: cover;
+}
+
+.testimonials__daniel .testimonials__text {
+    z-index: 1;
+}
+
+.testimonials__daniel-quotation {
+    position: absolute;
+    top: 15px;
+    right: 110px;
+    width: 90px;
+    opacity: 0.8;
+    z-index: -1;
+} 
+
+/* Jonathan */
+
+.testimonials__jonathan {
+    background: var(--grey-500);
+    border-radius: 10px;
+
+    color: var(--white);
+
+    padding: 2rem;
+    box-shadow: 0px 50px 80px rgba(0, 0, 0, 0.3);
+}
+
+.testimonials__jonathan .image-jonathan {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+/* Jeannette */
+
+.testimonials__jeannette {
+    background: var(--white);
+    border-radius: 10px;
+
+    color: var(--grey-500);
+
+    padding: 2rem;
+    box-shadow: 0px 50px 80px rgba(0, 0, 0, 0.3);
+}
+
+.testimonials__jeannette .image-jeannette {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+.testimonials__jeannette .testimonials__text {
+    font-size: 1.1rem;
+}
+
+.testimonials__jeannette .testimonials__quote {
+    color: var(--grey-400);
+    line-height: 1.4;
+}
+
+/* Patrick */
+
+.testimonials__patrick {
+    background: var(--dark-blue);
+    border-radius: 10px;
+
+    color: var(--grey-100);
+
+    padding: 2rem;
+    box-shadow: 0px 50px 80px rgba(0, 0, 0, 0.3);
+}
+
+.testimonials__patrick .image-patrick {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 2px solid var(--purple-300);
+
+    object-fit: cover;
+}
+
+/* Kira */
+
+.testimonials__kira {
+    background-color: var(--white);
+    border-radius: 10px; 
+
+    color: var(--grey-500);
+
+    padding: 2rem;
+    box-shadow: 0px 50px 80px rgba(0, 0, 0, 0.3);
+}
+
+.testimonials__kira .image-kira {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+
+    object-fit: cover;  
+}
+
+.testimonials__kira .testimonials__quote {
+    color: var(--grey-400);
+}
